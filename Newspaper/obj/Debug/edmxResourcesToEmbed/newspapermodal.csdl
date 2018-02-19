@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="newspaperModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Onlinenewspaper_Content">
+    <Key>
+      <PropertyRef Name="ContentId" />
+    </Key>
+    <Property Name="ContentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContentTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="URL" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Logo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryID" Type="Int16" Nullable="false" />
+    <Property Name="LanguageID" Type="Int16" Nullable="false" />
+    <Property Name="ContinentID" Type="Int16" Nullable="false" />
+    <Property Name="MetaTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MetaDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MetaKeywords" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Createdon" Type="DateTime" Nullable="false" />
+    <Property Name="Updatedon" Type="DateTime" />
+    <Property Name="ContentStatus" Type="Boolean" Nullable="false" />
+    <Property Name="Createdby" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Onlinenewspaper_Continent">
+    <Key>
+      <PropertyRef Name="ContinentID" />
+    </Key>
+    <Property Name="ContinentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContinentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sorder" Type="Int16" Nullable="false" />
+    <Property Name="MetaTitle" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MetaDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MetaKeywords" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContinentStatus" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Onlinenewspaper_Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Capital" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GovernmentType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CurrencyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Language" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Totalarea" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContinentID" Type="Int16" Nullable="false" />
+    <Property Name="CountryStatus" Type="Boolean" Nullable="false" />
+    <Property Name="Logo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Onlinenewspaper_Language">
+    <Key>
+      <PropertyRef Name="LanguageID" />
+    </Key>
+    <Property Name="LanguageID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LanguageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SOrder" Type="Int16" Nullable="false" />
+    <Property Name="LanguageStatus" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Onlinenewspapers_Subscription">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IPAddress" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Createdon" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="newspaperEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Onlinenewspaper_Content" EntityType="Self.Onlinenewspaper_Content" />
+    <EntitySet Name="Onlinenewspaper_Continent" EntityType="Self.Onlinenewspaper_Continent" />
+    <EntitySet Name="Onlinenewspaper_Country" EntityType="Self.Onlinenewspaper_Country" />
+    <EntitySet Name="Onlinenewspaper_Language" EntityType="Self.Onlinenewspaper_Language" />
+    <EntitySet Name="Onlinenewspapers_Subscription" EntityType="Self.Onlinenewspapers_Subscription" />
+    <FunctionImport Name="USP_BindPapersBy_Country">
+      <Parameter Name="p_CountryID" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="USP_NewsPaper_BindCountriesByContinent">
+      <Parameter Name="p_ContinentID" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="USP_Newspaper_GetContent" />
+    <FunctionImport Name="USP_Newspaper_GetContentAlphabetwise">
+      <Parameter Name="p_Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_RedirectTo_Newspaper">
+      <Parameter Name="p_ContentId" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A0A2478-ADFE-4CB6-8B05-3CA3433DF00A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Newspaper</RootNamespace>
+    <AssemblyName>Newspaper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Theme1\css\fontawesome-4.2.0.min.css" />
+    <Content Include="App_Themes\Theme1\css\fonts\fontawesome-webfont.svg" />
+    <Content Include="App_Themes\Theme1\css\fonts\index.html" />
+    <Content Include="App_Themes\Theme1\css\framework.css" />
+    <Content Include="App_Themes\Theme1\css\layout.css" />
+    <Content Include="App_Themes\Theme1\Images\1.jpg" />
+    <Content Include="App_Themes\Theme1\Images\2.jpg" />
+    <Content Include="App_Themes\Theme1\Images\3.jpg" />
+    <Content Include="App_Themes\Theme1\Images\4.jpg" />
+    <Content Include="App_Themes\Theme1\Images\5.jpg" />
+    <Content Include="App_Themes\Theme1\Images\Africa-Map.png" />
+    <Content Include="App_Themes\Theme1\Images\Antarctica-Map.png" />
+    <Content Include="App_Themes\Theme1\Images\Asia-Map.png" />
+    <Content Include="App_Themes\Theme1\Images\Australia-Map.png" />
+    <Content Include="App_Themes\Theme1\Images\Europe-Map.png" />
+    <Content Include="App_Themes\Theme1\Images\North-America-Map.png" />
+    <Content Include="App_Themes\Theme1\Images\Other\160x600.jpg" />
+    <Content Include="App_Themes\Theme1\Images\Other\300x250.jpg" />
+    <Content Include="App_Themes\Theme1\Images\Other\300x250_1.jpg" />
+    <Content Include="App_Themes\Theme1\Images\Other\468x60.png" />
+    <Content Include="App_Themes\Theme1\Images\Other\500x300.gif" />
+    <Content Include="App_Themes\Theme1\Images\Other\728x90.jpg" />
+    <Content Include="App_Themes\Theme1\Images\Other\728x90.png" />
+    <Content Include="App_Themes\Theme1\Images\Other\avatar.png" />
+    <Content Include="App_Themes\Theme1\Images\Other\imgl.gif" />
+    <Content Include="App_Themes\Theme1\Images\Other\imgr.gif" />
+    <Content Include="App_Themes\Theme1\Images\South-America-Map.png" />
+    <Content Include="App_Themes\Theme1\scripts\jquery.min.js" />
+    <Content Include="App_Themes\Theme1\scripts\jquery.mobilemenu.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Flags\ad_64.png" />
+    <Content Include="Flags\ae_64.png" />
+    <Content Include="Flags\af_64.png" />
+    <Content Include="Flags\ag_64.png" />
+    <Content Include="Flags\ai_64.png" />
+    <Content Include="Flags\al_64.png" />
+    <Content Include="Flags\am_64.png" />
+    <Content Include="Flags\ao_64.png" />
+    <Content Include="Flags\aq_64.png" />
+    <Content Include="Flags\ar_64.png" />
+    <Content Include="Flags\as_64.png" />
+    <Content Include="Flags\at_64.png" />
+    <Content Include="Flags\au_64.png" />
+    <Content Include="Flags\aw_64.png" />
+    <Content Include="Flags\ax_64.png" />
+    <Content Include="Flags\az_64.png" />
+    <Content Include="Flags\ba_64.png" />
+    <Content Include="Flags\bb_64.png" />
+    <Content Include="Flags\bd_64.png" />
+    <Content Include="Flags\be_64.png" />
+    <Content Include="Flags\bf_64.png" />
+    <Content Include="Flags\bg_64.png" />
+    <Content Include="Flags\bh_64.png" />
+    <Content Include="Flags\bi_64.png" />
+    <Content Include="Flags\bj_64.png" />
+    <Content Include="Flags\bl_64.png" />
+    <Content Include="Flags\bm_64.png" />
+    <Content Include="Flags\bn_64.png" />
+    <Content Include="Flags\bo_64.png" />
+    <Content Include="Flags\bq_64.png" />
+    <Content Include="Flags\br_64.png" />
+    <Content Include="Flags\bs_64.png" />
+    <Content Include="Flags\bt_64.png" />
+    <Content Include="Flags\bv_64.png" />
+    <Content Include="Flags\bw_64.png" />
+    <Content Include="Flags\by_64.png" />
+    <Content Include="Flags\bz_64.png" />
+    <Content Include="Flags\ca_64.png" />
+    <Content Include="Flags\cc_64.png" />
+    <Content Include="Flags\cd_64.png" />
+    <Content Include="Flags\cf_64.png" />
+    <Content Include="Flags\cg_64.png" />
+    <Content Include="Flags\ch_64.png" />
+    <Content Include="Flags\ci_64.png" />
+    <Content Include="Flags\ck_64.png" />
+    <Content Include="Flags\cl_64.png" />
+    <Content Include="Flags\cm_64.png" />
+    <Content Include="Flags\cn_64.png" />
+    <Content Include="Flags\co_64.png" />
+    <Content Include="Flags\cr_64.png" />
+    <Content Include="Flags\cu_64.png" />
+    <Content Include="Flags\cv_64.png" />
+    <Content Include="Flags\cw_64.png" />
+    <Content Include="Flags\cx_64.png" />
+    <Content Include="Flags\cy_64.png" />
+    <Content Include="Flags\cz_64.png" />
+    <Content Include="Flags\de_64.png" />
+    <Content Include="Flags\dj_64.png" />
+    <Content Include="Flags\dk_64.png" />
+    <Content Include="Flags\dm_64.png" />
+    <Content Include="Flags\do_64.png" />
+    <Content Include="Flags\dz_64.png" />
+    <Content Include="Flags\ec_64.png" />
+    <Content Include="Flags\ee_64.png" />
+    <Content Include="Flags\eg_64.png" />
+    <Content Include="Flags\eh_64.png" />
+    <Content Include="Flags\er_64.png" />
+    <Content Include="Flags\es_64.png" />
+    <Content Include="Flags\et_64.png" />
+    <Content Include="Flags\fi_64.png" />
+    <Content Include="Flags\fj_64.png" />
+    <Content Include="Flags\fk_64.png" />
+    <Content Include="Flags\Flag_of_Armenia.png" />
+    <Content Include="Flags\fm_64.png" />
+    <Content Include="Flags\fo_64.png" />
+    <Content Include="Flags\fr_64.png" />
+    <Content Include="Flags\ga_64.png" />
+    <Content Include="Flags\gb_64.png" />
+    <Content Include="Flags\gd_64.png" />
+    <Content Include="Flags\ge_64.png" />
+    <Content Include="Flags\gf_64.png" />
+    <Content Include="Flags\gg_64.png" />
+    <Content Include="Flags\gh_64.png" />
+    <Content Include="Flags\gi_64.png" />
+    <Content Include="Flags\gl_64.png" />
+    <Content Include="Flags\gm_64.png" />
+    <Content Include="Flags\gn_64.png" />
+    <Content Include="Flags\gp_64.png" />
+    <Content Include="Flags\gq_64.png" />
+    <Content Include="Flags\gr_64.png" />
+    <Content Include="Flags\gs_64.png" />
+    <Content Include="Flags\gt_64.png" />
+    <Content Include="Flags\gu_64.png" />
+    <Content Include="Flags\gw_64.png" />
+    <Content Include="Flags\gy_64.png" />
+    <Content Include="Flags\hk_64.png" />
+    <Content Include="Flags\hm_64.png" />
+    <Content Include="Flags\hn_64.png" />
+    <Content Include="Flags\hr_64.png" />
+    <Content Include="Flags\ht_64.png" />
+    <Content Include="Flags\hu_64.png" />
+    <Content Include="Flags\id_64.png" />
+    <Content Include="Flags\ie_64.png" />
+    <Content Include="Flags\il_64.png" />
+    <Content Include="Flags\im_64.png" />
+    <Content Include="Flags\in_64.png" />
+    <Content Include="Flags\io_64.png" />
+    <Content Include="Flags\iq_64.png" />
+    <Content Include="Flags\ir_64.png" />
+    <Content Include="Flags\is_64.png" />
+    <Content Include="Flags\it_64.png" />
+    <Content Include="Flags\je_64.png" />
+    <Content Include="Flags\jm_64.png" />
+    <Content Include="Flags\jo_64.png" />
+    <Content Include="Flags\jp_64.png" />
+    <Content Include="Flags\ke_64.png" />
+    <Content Include="Flags\kg_64.png" />
+    <Content Include="Flags\kh_64.png" />
+    <Content Include="Flags\ki_64.png" />
+    <Content Include="Flags\km_64.png" />
+    <Content Include="Flags\kn_64.png" />
+    <Content Include="Flags\kp_64.png" />
+    <Content Include="Flags\kr_64.png" />
+    <Content Include="Flags\kw_64.png" />
+    <Content Include="Flags\ky_64.png" />
+    <Content Include="Flags\kz_64.png" />
+    <Content Include="Flags\la_64.png" />
+    <Content Include="Flags\lb_64.png" />
+    <Content Include="Flags\lc_64.png" />
+    <Content Include="Flags\li_64.png" />
+    <Content Include="Flags\lk_64.png" />
+    <Content Include="Flags\lr_64.png" />
+    <Content Include="Flags\ls_64.png" />
+    <Content Include="Flags\lt_64.png" />
+    <Content Include="Flags\lu_64.png" />
+    <Content Include="Flags\lv_64.png" />
+    <Content Include="Flags\ly_64.png" />
+    <Content Include="Flags\ma_64.png" />
+    <Content Include="Flags\mc_64.png" />
+    <Content Include="Flags\md_64.png" />
+    <Content Include="Flags\me_64.png" />
+    <Content Include="Flags\mf_64.png" />
+    <Content Include="Flags\mg_64.png" />
+    <Content Include="Flags\mh_64.png" />
+    <Content Include="Flags\mk_64.png" />
+    <Content Include="Flags\ml_64.png" />
+    <Content Include="Flags\mm_64.png" />
+    <Content Include="Flags\mn_64.png" />
+    <Content Include="Flags\mo_64.png" />
+    <Content Include="Flags\mp_64.png" />
+    <Content Include="Flags\mq_64.png" />
+    <Content Include="Flags\mr_64.png" />
+    <Content Include="Flags\ms_64.png" />
+    <Content Include="Flags\mt_64.png" />
+    <Content Include="Flags\mu_64.png" />
+    <Content Include="Flags\mv_64.png" />
+    <Content Include="Flags\mw_64.png" />
+    <Content Include="Flags\mx_64.png" />
+    <Content Include="Flags\my_64.png" />
+    <Content Include="Flags\mz_64.png" />
+    <Content Include="Flags\na_64.png" />
+    <Content Include="Flags\nc_64.png" />
+    <Content Include="Flags\ne_64.png" />
+    <Content Include="Flags\nf_64.png" />
+    <Content Include="Flags\ng_64.png" />
+    <Content Include="Flags\ni_64.png" />
+    <Content Include="Flags\nl_64.png" />
+    <Content Include="Flags\no_64.png" />
+    <Content Include="Flags\np_64.png" />
+    <Content Include="Flags\nr_64.png" />
+    <Content Include="Flags\nu_64.png" />
+    <Content Include="Flags\nz_64.png" />
+    <Content Include="Flags\om_64.png" />
+    <Content Include="Flags\pa_64.png" />
+    <Content Include="Flags\pe_64.png" />
+    <Content Include="Flags\pf_64.png" />
+    <Content Include="Flags\pg_64.png" />
+    <Content Include="Flags\ph_64.png" />
+    <Content Include="Flags\pk_64.png" />
+    <Content Include="Flags\pl_64.png" />
+    <Content Include="Flags\pm_64.png" />
+    <Content Include="Flags\pn_64.png" />
+    <Content Include="Flags\pr_64.png" />
+    <Content Include="Flags\ps_64.png" />
+    <Content Include="Flags\pt_64.png" />
+    <Content Include="Flags\pw_64.png" />
+    <Content Include="Flags\py_64.png" />
+    <Content Include="Flags\qa_64.png" />
+    <Content Include="Flags\re_64.png" />
+    <Content Include="Flags\ro_64.png" />
+    <Content Include="Flags\rs_64.png" />
+    <Content Include="Flags\ru_64.png" />
+    <Content Include="Flags\rw_64.png" />
+    <Content Include="Flags\sa_64.png" />
+    <Content Include="Flags\sb_64.png" />
+    <Content Include="Flags\sc_64.png" />
+    <Content Include="Flags\sd_64.png" />
+    <Content Include="Flags\se_64.png" />
+    <Content Include="Flags\sg_64.png" />
+    <Content Include="Flags\sh_64.png" />
+    <Content Include="Flags\si_64.png" />
+    <Content Include="Flags\sj_64.png" />
+    <Content Include="Flags\sk_64.png" />
+    <Content Include="Flags\sl_64.png" />
+    <Content Include="Flags\sm_64.png" />
+    <Content Include="Flags\sn_64.png" />
+    <Content Include="Flags\so_64.png" />
+    <Content Include="Flags\sr_64.png" />
+    <Content Include="Flags\ss_64.png" />
+    <Content Include="Flags\st_64.png" />
+    <Content Include="Flags\sv_64.png" />
+    <Content Include="Flags\sx_64.png" />
+    <Content Include="Flags\sy_64.png" />
+    <Content Include="Flags\sz_64.png" />
+    <Content Include="Flags\tc_64.png" />
+    <Content Include="Flags\td_64.png" />
+    <Content Include="Flags\tf_64.png" />
+    <Content Include="Flags\tg_64.png" />
+    <Content Include="Flags\th_64.png" />
+    <Content Include="Flags\tj_64.png" />
+    <Content Include="Flags\tk_64.png" />
+    <Content Include="Flags\tl_64.png" />
+    <Content Include="Flags\tm_64.png" />
+    <Content Include="Flags\tn_64.png" />
+    <Content Include="Flags\to_64.png" />
+    <Content Include="Flags\tr_64.png" />
+    <Content Include="Flags\tt_64.png" />
+    <Content Include="Flags\tv_64.png" />
+    <Content Include="Flags\tw_64.png" />
+    <Content Include="Flags\tz_64.png" />
+    <Content Include="Flags\ua_64.png" />
+    <Content Include="Flags\ug_64.png" />
+    <Content Include="Flags\um_64.png" />
+    <Content Include="Flags\us_64.png" />
+    <Content Include="Flags\uy_64.png" />
+    <Content Include="Flags\uz_64.png" />
+    <Content Include="Flags\va_64.png" />
+    <Content Include="Flags\vc_64.png" />
+    <Content Include="Flags\ve_64.png" />
+    <Content Include="Flags\vg_64.png" />
+    <Content Include="Flags\vi_64.png" />
+    <Content Include="Flags\vn_64.png" />
+    <Content Include="Flags\vu_64.png" />
+    <Content Include="Flags\wf_64.png" />
+    <Content Include="Flags\ws_64.png" />
+    <Content Include="Flags\ye_64.png" />
+    <Content Include="Flags\yt_64.png" />
+    <Content Include="Flags\za_64.png" />
+    <Content Include="Flags\zm_64.png" />
+    <Content Include="Flags\zw_64.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="App_Themes\Theme1\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="App_Themes\Theme1\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="App_Themes\Theme1\css\fonts\FontAwesome.otf" />
+    <EntityDeploy Include="Models\abs_miscellaneous.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>abs_miscellaneous.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\abs_miscellaneous.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>abs_miscellaneous.edmx</DependentUpon>
+      <LastGenOutput>abs_miscellaneous.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\abs_miscellaneous.edmx.diagram">
+      <DependentUpon>abs_miscellaneous.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\abs_miscellaneous.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>abs_miscellaneous.edmx</DependentUpon>
+      <LastGenOutput>abs_miscellaneous.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Masterlayout.cshtml" />
+    <Content Include="Views\Newspaper\Home.cshtml" />
+    <Content Include="Views\Newspaper\Contries.cshtml" />
+    <Content Include="Views\Newspaper\Newspapers.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\NewspaperController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\abs_miscellaneous.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>abs_miscellaneous.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\abs_miscellaneous.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>abs_miscellaneous.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\abs_miscellaneous.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>abs_miscellaneous.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\category.cs">
+      <DependentUpon>abs_miscellaneous.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\content.cs">
+      <DependentUpon>abs_miscellaneous.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\continent.cs">
+      <DependentUpon>abs_miscellaneous.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\country.cs">
+      <DependentUpon>abs_miscellaneous.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\language.cs">
+      <DependentUpon>abs_miscellaneous.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8550</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8550/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="abs_miscellaneousModelStoreContainer" CdmEntityContainer="abs_miscellaneousEntities1">
+    <EntitySetMapping Name="country">
+      <EntityTypeMapping TypeName="abs_miscellaneousModel.country">
+        <MappingFragment StoreEntitySet="country">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="countrycode" ColumnName="countrycode" />
+          <ScalarProperty Name="country1" ColumnName="country" />
+          <ScalarProperty Name="capital" ColumnName="capital" />
+          <ScalarProperty Name="governmenttype" ColumnName="governmenttype" />
+          <ScalarProperty Name="currencyname" ColumnName="currencyname" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="totalarea" ColumnName="totalarea" />
+          <ScalarProperty Name="continentid" ColumnName="continentid" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="category">
+      <EntityTypeMapping TypeName="abs_miscellaneousModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="categoryname" ColumnName="categoryname" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="content">
+      <EntityTypeMapping TypeName="abs_miscellaneousModel.content">
+        <MappingFragment StoreEntitySet="content">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="languageid" ColumnName="languageid" />
+          <ScalarProperty Name="countrycode" ColumnName="countrycode" />
+          <ScalarProperty Name="continentid" ColumnName="continentid" />
+          <ScalarProperty Name="addeddate" ColumnName="addeddate" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="metadescription" ColumnName="metadescription" />
+          <ScalarProperty Name="metakeywords" ColumnName="metakeywords" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="continent">
+      <EntityTypeMapping TypeName="abs_miscellaneousModel.continent">
+        <MappingFragment StoreEntitySet="continent">
+          <ScalarProperty Name="continentid" ColumnName="continentid" />
+          <ScalarProperty Name="continentname" ColumnName="continentname" />
+          <ScalarProperty Name="imagepath" ColumnName="imagepath" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="metadescription" ColumnName="metadescription" />
+          <ScalarProperty Name="metakeywords" ColumnName="metakeywords" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="language">
+      <EntityTypeMapping TypeName="abs_miscellaneousModel.language">
+        <MappingFragment StoreEntitySet="language">
+          <ScalarProperty Name="languageid" ColumnName="languageid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

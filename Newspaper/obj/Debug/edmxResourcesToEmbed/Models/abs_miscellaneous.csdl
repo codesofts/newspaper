@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="abs_miscellaneousModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="countrycode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="countryname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="capital" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="governmenttype" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="currencyname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="language" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="location" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="totalarea" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="continentid" Type="Int16" />
+    <Property Name="logo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="categoryid" />
+      <PropertyRef Name="categoryname" />
+      <PropertyRef Name="status" />
+    </Key>
+    <Property Name="categoryid" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoryname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="content">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="url" />
+      <PropertyRef Name="categoryid" />
+      <PropertyRef Name="languageid" />
+      <PropertyRef Name="addeddate" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="metadescription" />
+      <PropertyRef Name="metakeywords" />
+      <PropertyRef Name="status" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="url" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="logo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="categoryid" Type="Int16" Nullable="false" />
+    <Property Name="languageid" Type="Int16" Nullable="false" />
+    <Property Name="countrycode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="continentid" Type="Int16" />
+    <Property Name="addeddate" Type="DateTime" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="metadescription" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="metakeywords" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="continent">
+    <Key>
+      <PropertyRef Name="continentid" />
+      <PropertyRef Name="continentname" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="metadescription" />
+      <PropertyRef Name="metakeywords" />
+    </Key>
+    <Property Name="continentid" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="continentname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="imagepath" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="metadescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="metakeywords" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="language">
+    <Key>
+      <PropertyRef Name="languageid" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="status" />
+    </Key>
+    <Property Name="languageid" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="abs_miscellaneousEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="country" EntityType="Self.country" />
+    <EntitySet Name="category" EntityType="Self.category" />
+    <EntitySet Name="content" EntityType="Self.content" />
+    <EntitySet Name="continent" EntityType="Self.continent" />
+    <EntitySet Name="language" EntityType="Self.language" />
+  </EntityContainer>
+</Schema>

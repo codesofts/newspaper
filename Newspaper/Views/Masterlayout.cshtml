@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="robots" content="index, follow" />
+    <meta name="rating" content="General" />
+    <meta name="distribution" content="global" />
+    <meta name="author" content="http://www.onpdb.com/" />
+
+    <link href="~/App_Themes/Theme1/css/layout.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/App_Themes/Theme1/scripts/jquery.min.js"></script>
+    <script src="~/App_Themes/Theme1/scripts/jquery.mobilemenu.js"></script>
+</head>
+<body>
+    <div>
+
+        <div class="wrapper row0">
+            <header id="topbar" class="clear">
+                <div class="fl_left">
+                    <ul class="nospace inline">
+                        <!-- <li><i class="fa fa-phone"></i></li> -->
+                        <li><i class="fa fa-envelope-o"></i>info@onpdb.com</li>
+                    </ul>
+                </div>
+                <div class="fl_right">
+                    <ul class="faico clear">
+                        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="faicon-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+        <div class="wrapper row1">
+            <header id="header" class="clear">
+                <div id="logo" class="fl_left">
+                    <h1><a href="Home">onpdb.com</a></h1>
+                    <p>Online NEWS Paper Data Base</p>
+                </div>
+                <div class="fl_right">
+                    <a href="#">
+                        <img src="~/App_Themes/Theme1/Images/Other/468x60.png" alt="" />
+                    </a>
+                </div>
+            </header>
+        </div>
+        <div class="wrapper row2">
+            <nav id="mainav" class="clear">
+                <ul class="clear">
+                    <li class="active"><a href="Home">Home</a></li>
+                    <li>
+                        <a class="drop" href="#">Continent</a>
+                        <ul>
+                            <li><a href="Contries?continentid=1">North America</a></li>
+                            <li><a href="Contries?continentid=2">South America</a></li>
+                            <li><a href="Contries?continentid=5">Africa</a></li>
+                            <li><a href="Contries?continentid=4">Asia</a></li>
+                            <li><a href="Contries?continentid=3">Europe</a></li>
+                            <li><a href="Contries?continentid=6">Australia</a></li>
+                            <li><a href="Contries?continentid=7">Antarctica</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="drop" href="#">Language</a>
+                        <ul>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Telugu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Alphabet</a></li>
+                    <li><a href="mailto:info@onpdb.com">Contact US</a></li>
+                </ul>
+            </nav>
+        </div>
+        @RenderBody()
+        <div class="wrapper row4">
+            <footer id="footer" class="clear">
+
+                <div class="group">
+                    <div class="one_third first">
+                        <h6 class="title">Advise US</h6>
+                        <p class="txt">
+                            Please advise of any <font color="red">new </font>online newspapers, <font color="red">changes </font>
+                            to newspaper links or <font color="red">errors </font>that you have found. Thank you.
+                        </p>
+                        <p class="txt">Our Policy is not to list sites that are Newspaper Directories or that republish newsfeeds or news stories from other newspaper sites. If you find sites in our lists that you suspect are of this type then please let as know and we will reassess them and, if we agree, will remove them.</p>
+                    </div>
+                    <div class="one_third">
+                        <h6 class="title">site map</h6>
+                        <ul class="nospace linklist">
+                            <li><a href="Home">Home Page</a></li>
+                            <li><a href="Home">Continent</a></li>
+                            <li><a href="#">Language</a></li>
+                            <li><a href="#">Alphabet</a></li>
+                            <li><a href="mailto:info@onpdb.com">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="one_third">
+                        <h6 class="title">onpdb.com</h6>
+                        <p class="btmspace-30">Thousands of Online Newspapers on the Web Data Base, World Newspaper Web Directory</p>
+                        <input class="btmspace-15" type="text" value="" placeholder="Enter Email Here" />
+                        <button class="bold uppercase" type="submit" value="Subscribe">Subscribe <i class="fa fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="wrapper row5">
+            <div id="copyright" class="clear">
+                <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">onpdb.com</a></p>
+                <!--     <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

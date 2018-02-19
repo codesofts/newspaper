@@ -1,0 +1,28 @@
+﻿@using Newspaper.Models;
+@model  List<country>
+@{
+    ViewBag.Title = "Contries";
+    Layout = "~/Views/Masterlayout.cshtml";
+}
+
+<h2>Contries</h2>
+<div>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="Newspapers?CountryID=@item.countrycode">
+                    <img src="~/Flags/@item.logo" />
+                    <strong>
+                        @item.countryname
+                    </strong>
+                    <p>Capital: @item.capital</p>
+                    <p>GovernmentType: @item.governmenttype</p>
+                    <p>CurrencyName:   @item.currencyname</p>
+                    <p>Totalarea:      @item.totalarea</p>
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+
